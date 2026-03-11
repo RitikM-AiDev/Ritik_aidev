@@ -6,7 +6,7 @@ function App() {
     const navigate = useNavigate();
     return(
        <>   
-       <div className='home'>
+       <div className='home'> 
                 <div className='header'>
                     <h2 style={{margin : 40}}>AIZON</h2>
                     <div className='header-nav'>
