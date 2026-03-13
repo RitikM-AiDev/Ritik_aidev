@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import desktop_assistant_project from './assets/desktop_assistant.png'
 import mailer_agent_project from './assets/mailer_agent.png'
 import Notogen_project from './assets/Notogen_project.png'
+import brain_tumor_detection from './assets/brain_tumor_detection_project.svg'
 function Projects() {
     const navigate = useNavigate();
     return(
@@ -23,19 +24,25 @@ function Projects() {
                           <h1 style={{fontSize : 60}}>Where My Ideas Became Reality !!</h1>  
                           </div>
                         <div className="project">
-                            <div style={{backgroundColor :"white"}} className="project-icon">
+                              <div className="project-icon">
+                                <img src={brain_tumor_detection}></img>
+                                <a href='https://brain-tumor-ai.up.railway.app/' target='_blank'>Brain Tumor Detection and classification</a>
+                                <a className='project-git' href='https://github.com/RitikM-AiDev/brain-tumor-ai' target='_blank'><button className='project-button-git' ><FaGithub/>GitHub Link</button></a>
+                                <p>AI-powered brain tumor detection and classification system that analyzes MRI scans using deep learning. Automatically identifies tumor type and generates a detailed diagnostic report.</p>
+                            </div>
+                            <div className="project-icon">
                                 <img src={mailer_agent_project}></img>
                                 <h2>Personalised Mailer Agent</h2>
-                                <a className='project-git' href='https://github.com/RitikM-AiDev/Agentic-automated-Personal-Email-Agent'><button className='project-button-git' ><FaGithub/>GitHub Link</button></a>
+                                <a className='project-git' href='https://github.com/RitikM-AiDev/Agentic-automated-Personal-Email-Agent' target='_blank'><button className='project-button-git' ><FaGithub/>GitHub Link</button></a>
                                 <p>A minimal illustration showing AI agents sorting emails into formal and informal categories, ideal for showcasing intelligent message handling and sending mail as your personal agent in a clean, professional layout.</p>
                             </div>
-                            <div style={{backgroundColor :"white"}} className="project-icon">
+                            <div className="project-icon">
                                 <img src={desktop_assistant_project}></img>
-                                <h2>DeskTop Assistant</h2>
+                                <a href='https://desko-eqco.onrender.com/' target='_blank'>DeskTop Assistant</a>
                                 <a className='project-git' href='https://github.com/RitikM-AiDev/AI-Agentic---desktop-assistant' target='_blank'><button className='project-button-git' ><FaGithub/>GitHub Link</button></a>
                                 <p>Your personal AI assistant that lives on your desktop — a smart, conversational chatbot you can talk to anytime, ask anything, and get tasks done seamlessly, hands-free.Always available, always ready — your trusted digital companion.</p>
                             </div>
-                             <div style={{backgroundColor :"white"}} className="project-icon">
+                             <div className="project-icon">
                                 <img src={Notogen_project}></img>
                                 <h2>Notogen-AI Integrated Notes Maker Mobile APP</h2>
                                 <a className='project-git' href='https://github.com/RitikM-AiDev/Notogen-AI_Notes_Maker' target='_blank'><button className='project-button-git' ><FaGithub/>GitHub Link</button></a>

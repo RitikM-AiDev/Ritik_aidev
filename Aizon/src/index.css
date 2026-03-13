@@ -32,6 +32,7 @@
     }
     .project-git{
         text-decoration: none;
+        cursor: pointer;
         color: black;
     }
     .project-button-git{
@@ -39,6 +40,7 @@
         background: none;
         width: 150px;
         font-size:15px;
+        cursor: -webkit-grab;
         font-weight: 800;
         color: white;
         background-color: black;
@@ -56,16 +58,23 @@
         justify-content: space-evenly;
         font-size: x-large;
         margin: 0px;
+        background-color: black;
         padding: 10px;
         box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.8);
         border-radius: 1.5rem;
         border:1px solid #d1d5db;
-        cursor: pointer;
+        cursor: -webkit-grab;
+        color: white;
         transition-duration: 0.5s;
         width: 400px;
     }
+    .project-icon a{
+        color: white;
+        font-weight: bolder;
+        cursor: -webkit-grab;
+    }
     .project-icon p{
-        color:#797b81;
+        color:white;
     }
     .project-icon:hover{
         transform: scale(1.02);
