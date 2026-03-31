@@ -9,7 +9,7 @@ function Skills() {
        <>   
        <div className='home'>
                 <div className='header'>
-                    <h2 style={{margin : 40}}>AIZON</h2>
+                    <h2 style={{marginRight : "2px"}}>RITIK</h2>
                     <div className='header-nav'>
                     <button className='header-button' onClick={()=>{navigate("/")}}>Home</button>
                     <button className='header-button' onClick={()=>{navigate("/about")}}>About</button>
@@ -29,6 +29,15 @@ function Skills() {
                 <GiBrain color="black" size={30}/>
                 <p>LLM Engineering</p>
               </div> 
+               <div style={{backgroundColor :"gold"}} className="skill-icon">
+                <GiBrain color="black" size={30}/>
+                <p>Deep Learning</p>
+              </div> 
+               <div style={{backgroundColor :"gold"}} className="skill-icon">
+                <GiBrain color="black" size={30}/>
+                <p>NLP</p>
+              </div> 
+
                <div style={{backgroundColor : "lightgreen"}} className="skill-icon">
                 <FaRobot color="black" size={30}/>
                 <p>Agentic AI</p>

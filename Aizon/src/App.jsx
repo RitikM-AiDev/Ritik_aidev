@@ -8,7 +8,7 @@ function App() {
        <>   
        <div className='home'> 
                 <div className='header'>
-                    <h2 style={{margin : 40}}>RITIK M - AI&ML ENGINEER</h2>
+                    <h4 style={{marginRight : "2px"}}>RITIK M - AI&ML ENGINEER</h4>
                     <div className='header-nav'>
                     <button className='header-button' onClick={()=>{navigate("/")}}>Home</button>
                     <button className='header-button' onClick={()=>{navigate("/about")}}>About</button>

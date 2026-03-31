@@ -5,7 +5,7 @@ function Contact() {
        <>   
        <div className='home'>
                 <div className='header'>
-                    <h2 style={{margin : 40}}>AIZON</h2>
+                    <h2 style={{marginRight : "2px"}}>RITIK</h2>
                     <div className='header-nav'>
                     <button className='header-button' onClick={()=>{navigate("/")}}>Home</button>
                     <button className='header-button' onClick={()=>{navigate("/about")}}>About</button>
