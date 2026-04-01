@@ -4,6 +4,8 @@ import desktop_assistant_project from './assets/desktop_assistant.png'
 import mailer_agent_project from './assets/mailer_agent.png'
 import Notogen_project from './assets/Notogen_project.png'
 import brain_tumor_detection from './assets/proj1.png'
+import assistant from './assets/assistant.png'
+import csv_logo from './assets/csv_logo.png'
 function Projects() {
     const navigate = useNavigate();
     return(
@@ -66,6 +68,44 @@ function Projects() {
                             <div className="project-icon">
                         <div className='pic-icon'>
                             <img src={Notogen_project}></img>
+                        </div>
+                         <div className="project-icon">
+                                <div className='pic-icon'>
+                                <img src={csv_logo}></img>
+                                </div>
+                                <div className='right-proj'>
+                                <h3>Agentic AI Project</h3>
+                                <h1>CSV Analyser - Know What Graphs You can Draw For Your CSVs</h1>
+                                <a href='https://ritik-aidev-csv-analyser.hf.space' target='_blank'>LIVE PROJECT LINK</a>
+                                <p>
+                                AI-powered CSV analyzer that automatically examines your CSV files and suggests the best types of charts to visualize the data. 
+                                It generates a complete HTML report that can be opened directly in a browser, showing suggested charts and a clear summary. 
+                                Built with a React frontend for file upload and display, and a backend powered by Agentic AI for intelligent analysis and report generation.
+                                </p>
+                                <a className='project-git' href='https://github.com/RitikM-AiDev/AI-Automated---CSV_Analyser' target='_blank'><button className='project-button-git' ><FaGithub/>GitHub Link</button></a>
+                                </div>
+                            </div>
+                           <div className="project-icon">
+                            <div className='pic-icon'>
+                                <img src={assistant} alt="Project Screenshot" />
+                            </div>
+                            <div className='right-proj'>
+                                <h3>Agentic AI Project</h3>
+                                <h1>My Assistant Bot</h1>
+                                <a href='https://ritik-aidev-vgram-bot.hf.space' target='_blank'>LIVE PROJECT LINK</a>
+                                
+                                <p>
+                                    My Assistant Bot is an AI-powered personal assistant that provides information about me. 
+                                    It intelligently answers questions about my skills, projects, and experience. 
+                                    The chatbot features a React-based interactive interface for smooth user interaction 
+                                    and is supported by a secure Agentic AI backend. 
+                                    It also guides users to relevant resources, projects, and career insights, making it a complete personal assistant experience.
+                                </p>
+
+                                <a className='project-git' href='https://github.com/RitikM-AiDev/VMARG_BOT' target='_blank'>
+                                    <button className='project-button-git'><FaGithub /> GitHub Link</button>
+                                </a>
+                            </div>
                         </div>
                         <div className='right-proj'>
                             <h3>AI Education Project</h3>
