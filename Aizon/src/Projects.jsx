@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import desktop_assistant_project from './assets/desktop_assistant.png'
 import mailer_agent_project from './assets/mailer_agent.png'
 import Notogen_project from './assets/Notogen_project.png'
-import brain_tumor_detection from './assets/brain_tumor_detection_project.svg'
+import brain_tumor_detection from './assets/proj1.png'
 function Projects() {
     const navigate = useNavigate();
     return(
@@ -21,41 +21,61 @@ function Projects() {
                 </div>
                 <div className="projects">
                  <div className="mark-project">
-                          <h1 style={{fontSize : 30}}>Where My Ideas Became Reality !!</h1>  
+                          <h1 style={{fontSize : 30}}>Dream. Build. Code. Repeat</h1>  
                           </div>
                         <div className="project">
                               <div className="project-icon">
                                 <div className='pic-icon'>
                                 <img src={brain_tumor_detection}></img>
-                                <a href='https://brain-tumor-ai.up.railway.app/' target='_blank'>Brain Tumor Detection</a>
+                                </div>
+                                <div className='right-proj'>
+                                <h3>Deep Learning Project</h3>
+                                <h1>BRAIN TUMOR DETECTOR</h1>
+                                <a href='https://brain-tumor-ai.up.railway.app/' target='_blank'>LIVE PROJECT LINK</a>
+                                <p>AI-powered brain tumor detection and classification system that analyzes MRI scans using deep learning. The system automatically identifies tumor type and generates a detailed diagnostic report. Built with frontend using JS and React for image upload and result display, backend using FastAPI for processing and API endpoints, and AI with Agentic AI for tumor classification and report generation.</p>
                                 <a className='project-git' href='https://github.com/RitikM-AiDev/brain-tumor-ai' target='_blank'><button className='project-button-git' ><FaGithub/>GitHub Link</button></a>
                                 </div>
-                                <p>AI-powered brain tumor detection and classification system that analyzes MRI scans using deep learning. Automatically identifies tumor type and generates a detailed diagnostic report.</p>
                             </div>
-                            <div className="project-icon">
-                                <div className='pic-icon'>
+                           <div className="project-icon">
+                            <div className='pic-icon'>
                                 <img src={mailer_agent_project}></img>
-                                <h2>Personalised Mailer Agent</h2>
-                                <a className='project-git' href='https://github.com/RitikM-AiDev/Agentic-automated-Personal-Email-Agent' target='_blank'><button className='project-button-git' ><FaGithub/>GitHub Link</button></a>
-                                </div>
-                                <p>A minimal illustration showing AI agents sorting emails into formal and informal categories, ideal for showcasing intelligent message handling and sending mail as your personal agent in a clean, professional layout.</p>
                             </div>
+                            <div className='right-proj'>
+                                <h3>AI Productivity Project</h3>
+                                <h1>PERSONALISED MAILER AGENT</h1>
+                                <p>AI-powered personalised mailer agent that intelligently sorts emails into formal and informal categories, drafts responses, and sends emails automatically. Built with frontend using JS and React for smooth user interaction, backend using FastAPI for secure email handling, and AI with Agentic AI to analyze content context, prioritize messages, and automate communication efficiently. Ideal for users who want smarter inbox management and professional automated email assistance.</p>
+                                <a className='project-git' href='https://github.com/RitikM-AiDev/Agentic-automated-Personal-Email-Agent' target='_blank'>
+                                    <button className='project-button-git'><FaGithub/>GitHub Link</button>
+                                </a>
+                            </div>
+                        </div>
                             <div className="project-icon">
-                                <div className='pic-icon'>
-                                <img src={desktop_assistant_project}></img>
-                                <a href='https://desko-eqco.onrender.com/' target='_blank'>DeskTop Assistant</a>
-                                <a className='project-git' href='https://github.com/RitikM-AiDev/AI-Agentic---desktop-assistant' target='_blank'><button className='project-button-git' ><FaGithub/>GitHub Link</button></a>
-                                </div>
-                                <p>Your personal AI assistant that lives on your desktop — a smart, conversational chatbot you can talk to anytime, ask anything, and get tasks done seamlessly, hands-free.Always available, always ready — your trusted digital companion.</p>
-                            </div>
-                             <div className="project-icon">
-                                <div className='pic-icon'>
-                                <img src={Notogen_project}></img>
-                                <h2>Notogen-AI Integrated Notes Maker Mobile APP</h2>
-                                <a className='project-git' href='https://github.com/RitikM-AiDev/Notogen-AI_Notes_Maker' target='_blank'><button className='project-button-git' ><FaGithub/>GitHub Link</button></a>
-                                </div>
-                                <p>NOTOGEN reduces classroom note-taking time by letting students focus on learning instead of writing. After class, students record what they learned, and NLP converts speech into clear notes. The system compares them with teacher notes, highlights mistakes, and provides corrections.</p>
-                            </div>
+                        <div className='pic-icon'>
+                            <img src={desktop_assistant_project}></img>
+                        </div>
+                        <div className='right-proj'>
+                            <h3>AI Productivity Project</h3>
+                            <h1>DESKTOP ASSISTANT</h1>
+                            <a href='https://desko-eqco.onrender.com/' target='_blank'>LIVE PROJECT LINK</a>
+                            <p>AI-powered desktop assistant that acts as your personal digital companion. Built with frontend using JS and React for an interactive and responsive interface, backend using FastAPI for handling requests efficiently, and AI with Agentic AI to process natural language, perform tasks, and provide instant answers. Always available, it helps you manage your day, automate routine tasks, and communicate seamlessly with a smart, conversational interface.</p>
+                            <a className='project-git' href='https://github.com/RitikM-AiDev/AI-Agentic---desktop-assistant' target='_blank'>
+                                <button className='project-button-git'><FaGithub/>GitHub Link</button>
+                            </a>
+                        </div>
+                        </div>
+                            <div className="project-icon">
+                        <div className='pic-icon'>
+                            <img src={Notogen_project}></img>
+                        </div>
+                        <div className='right-proj'>
+                            <h3>AI Education Project</h3>
+                            <h1>NOTOGEN - AI INTEGRATED NOTES MAKER</h1>
+                            <p>AI-powered mobile app that reduces classroom note-taking time, allowing students to focus on learning. Students record lectures, and NLP algorithms convert speech into structured, clear notes. Built with frontend using JS and React for mobile responsiveness, backend using FastAPI for processing and storage, and AI with Agentic AI to analyze, compare with teacher notes, highlight errors, and provide corrections. Ideal for improving learning efficiency and accuracy.</p>
+                            <a className='project-git' href='https://github.com/RitikM-AiDev/Notogen-AI_Notes_Maker' target='_blank'>
+                                <button className='project-button-git'><FaGithub/>GitHub Link</button>
+                            </a>
+                        </div>
+                    </div>
                         </div>
                           </div>
         </div>
