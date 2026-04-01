@@ -69,7 +69,17 @@ function Projects() {
                         <div className='pic-icon'>
                             <img src={Notogen_project}></img>
                         </div>
-                         <div className="project-icon">
+                        <div className='right-proj'>
+                            <h3>AI Education Project</h3>
+                            <h1>NOTOGEN - AI INTEGRATED NOTES MAKER</h1>
+                            <p>AI-powered mobile app that reduces classroom note-taking time, allowing students to focus on learning. Students record lectures, and NLP algorithms convert speech into structured, clear notes. Built with frontend using JS and React for mobile responsiveness, backend using FastAPI for processing and storage, and AI with Agentic AI to analyze, compare with teacher notes, highlight errors, and provide corrections. Ideal for improving learning efficiency and accuracy.</p>
+                            <a className='project-git' href='https://github.com/RitikM-AiDev/Notogen-AI_Notes_Maker' target='_blank'>
+                                <button className='project-button-git'><FaGithub/>GitHub Link</button>
+                            </a>
+                        </div>
+                        
+                    </div>
+                      <div className="project-icon">
                                 <div className='pic-icon'>
                                 <img src={csv_logo}></img>
                                 </div>
@@ -107,15 +117,6 @@ function Projects() {
                                 </a>
                             </div>
                         </div>
-                        <div className='right-proj'>
-                            <h3>AI Education Project</h3>
-                            <h1>NOTOGEN - AI INTEGRATED NOTES MAKER</h1>
-                            <p>AI-powered mobile app that reduces classroom note-taking time, allowing students to focus on learning. Students record lectures, and NLP algorithms convert speech into structured, clear notes. Built with frontend using JS and React for mobile responsiveness, backend using FastAPI for processing and storage, and AI with Agentic AI to analyze, compare with teacher notes, highlight errors, and provide corrections. Ideal for improving learning efficiency and accuracy.</p>
-                            <a className='project-git' href='https://github.com/RitikM-AiDev/Notogen-AI_Notes_Maker' target='_blank'>
-                                <button className='project-button-git'><FaGithub/>GitHub Link</button>
-                            </a>
-                        </div>
-                    </div>
                         </div>
                           </div>
         </div>
