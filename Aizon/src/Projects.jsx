@@ -43,7 +43,7 @@ function Projects() {
                                 <img src={mailer_agent_project}></img>
                             </div>
                             <div className='right-proj'>
-                                <h3>AI Productivity Project</h3>
+                                <h3>Agentic AI Project</h3>
                                 <h1>PERSONALISED MAILER AGENT</h1>
                                 <p>AI-powered personalised mailer agent that intelligently sorts emails into formal and informal categories, drafts responses, and sends emails automatically. Built with frontend using JS and React for smooth user interaction, backend using FastAPI for secure email handling, and AI with Agentic AI to analyze content context, prioritize messages, and automate communication efficiently. Ideal for users who want smarter inbox management and professional automated email assistance.</p>
                                 <a className='project-git' href='https://github.com/RitikM-AiDev/Agentic-automated-Personal-Email-Agent' target='_blank'>
@@ -56,7 +56,7 @@ function Projects() {
                             <img src={desktop_assistant_project}></img>
                         </div>
                         <div className='right-proj'>
-                            <h3>AI Productivity Project</h3>
+                            <h3>Agentic AI Project with Fullstack Web</h3>
                             <h1>DESKTOP ASSISTANT</h1>
                             <a href='https://desko-eqco.onrender.com/' target='_blank'>LIVE PROJECT LINK</a>
                             <p>AI-powered desktop assistant that acts as your personal digital companion. Built with frontend using JS and React for an interactive and responsive interface, backend using FastAPI for handling requests efficiently, and AI with Agentic AI to process natural language, perform tasks, and provide instant answers. Always available, it helps you manage your day, automate routine tasks, and communicate seamlessly with a smart, conversational interface.</p>
@@ -70,7 +70,7 @@ function Projects() {
                             <img src={Notogen_project}></img>
                         </div>
                         <div className='right-proj'>
-                            <h3>AI Education Project</h3>
+                            <h3>Mobile App With Agentic AI</h3>
                             <h1>NOTOGEN - AI INTEGRATED NOTES MAKER</h1>
                             <p>AI-powered mobile app that reduces classroom note-taking time, allowing students to focus on learning. Students record lectures, and NLP algorithms convert speech into structured, clear notes. Built with frontend using JS and React for mobile responsiveness, backend using FastAPI for processing and storage, and AI with Agentic AI to analyze, compare with teacher notes, highlight errors, and provide corrections. Ideal for improving learning efficiency and accuracy.</p>
                             <a className='project-git' href='https://github.com/RitikM-AiDev/Notogen-AI_Notes_Maker' target='_blank'>
