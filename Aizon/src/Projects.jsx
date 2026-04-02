@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { FaGithub } from "react-icons/fa";
-import desktop_assistant_project from './assets/desktop_assistant.png'
+import desktop_assistant_project from './assets/desko.png'
 import mailer_agent_project from './assets/mailer_agent.png'
 import Notogen_project from './assets/Notogen_project.png'
 import brain_tumor_detection from './assets/proj1.png'
