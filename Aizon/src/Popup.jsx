@@ -29,7 +29,7 @@ const Popup = ({ isOpen, onClose, project, darkMode }) => {
         <div className="w-full flex items-center justify-center bg-black/10 p-4">
           <img
             src={project.image}
-            alt={project.title}
+            alt={project.name}
             className="max-h-[45vh] w-auto object-contain rounded-xl"
           />
         </div>
@@ -38,7 +38,7 @@ const Popup = ({ isOpen, onClose, project, darkMode }) => {
         <div className="p-8 overflow-y-auto flex-1 space-y-5">
 
           <h2 className="text-3xl md:text-4xl font-bold">
-            {project.title}
+            {project.name}
           </h2>
 
           <p className={`text-base md:text-lg leading-relaxed ${

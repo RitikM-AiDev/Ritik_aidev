@@ -23,11 +23,30 @@ import {
     FaMoon,
     FaSun
 } from "react-icons/fa"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App() {
+  
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dark , Setdark] = useState(true);
+  const [dark , Setdark] = useState(()=>{
+       const saved_theme = localStorage.getItem("theme");
+       return saved_theme === "dark";
+  }
+  );
+  //  useEffect(()=>{
+  //    const saved_theme = localStorage.getItem("theme");
+  //    
+  // },[])
+
+  useEffect(()=>{
+    if(dark){
+       localStorage.setItem("theme", "dark")
+    }
+    else{
+      localStorage.setItem("theme","light")
+    }
+   
+  },[dark])
   const [popup,setPopup] = useState(false);
   const [header,setHeader] = useState(true);
    const [selectedProject, setSelectedProject] = useState(null);
@@ -132,6 +151,7 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
         setPopup(true);
         
   }
+ 
   const handle_theme = () =>{
     Setdark(!dark);
   }
@@ -260,9 +280,42 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
             </a>
           </div>
           </div>
-           <div className="w-90 h-90 rounded-full overflow-hidden bg-black">
-                <img   className="w-full h-full object-contain"  src={ritik_photo} alt="Ritik"/>
-        </div>
+              <div className="relative w-80 h-80 perspective-1000">
+  {/* Ambient glow */}
+  {/* <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-2xl opacity-40 animate-pulse"></div> */}
+  
+  {/* 3D Container */}
+  <div className="relative w-full h-full transform-gpu hover:scale-105 transition-transform duration-500 ease-out"
+       style={{ transformStyle: 'preserve-3d' }}>
+    
+    {/* Shadow layers for depth */}
+    {/* <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600/20 to-purple-600/20 blur-md translate-y-2 translate-x-2"></div> */}
+    {/* <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-600/30 to-pink-600/30 blur-lg translate-y-3 translate-x-3"></div> */}
+    
+    {/* Main image with 3D border */}
+    <div className="relative w-full h-full rounded-full p-[2px] bg-gradient-to-br from-blue-400 via-purple-500 to-pink-600 shadow-[0_15px_40px_rgba(139,92,246,0.5)]"
+         style={{ transform: 'translateZ(20px)' }}>
+      
+      {/* Inner shadow ring */}
+      <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-white/20 to-transparent opacity-60"></div>
+      
+      {/* Image container */}
+      <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-900 to-black shadow-inner">
+        <img 
+          className="w-full h-full object-cover scale-110" 
+          src={ritik_photo} 
+          alt="Ritik"
+        />
+        
+        {/* Glossy highlight overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-40 mix-blend-overlay"></div>
+        
+        {/* Edge highlight */}
+        <div className="absolute inset-0 rounded-full border border-white/10"></div>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
         </div>
       </section>
@@ -329,16 +382,15 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
               <Code2 />
             </div>
 
-            {/* ✅ PASS REAL DATA HERE */}
             <ChevronRight
               onClick={() => handle_popup(project)}
               className="right-arrow"
               style={{ cursor: "pointer" }}
             />
           </div>
-
-          {/* ✅ FIX TITLE */}
-          <h3>{project.title}</h3>
+          <h3>{project.name}</h3>
+          <h4>{project.title}</h4>
+          <h6>Press Arrow button to see !</h6>
 
         </div>
       ))}
@@ -360,18 +412,74 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
           <h2 className="section-title">Skills</h2>
 
           <div className="skills-grid">
-            {[
-              "Python",
-              "TensorFlow",
-              "PyTorch",
-              "React",
-              "Node.js",
-              "Docker",
-              "AWS",
-              "MongoDB",
-            ].map((skill) => (
-              <div className="skill-card" key={skill}>
-                {skill}
+            { [
+  {
+    type: "AI/ML",
+    skill: "LLM Engineering"
+  },
+  {
+    type: "AI/ML",
+    skill: "Deep Learning"
+  },
+  {
+    type: "AI/ML",
+    skill: "NLP"
+  },
+  {
+    type: "AI/ML",
+    skill: "Agentic AI"
+  },
+
+  {
+    type: "Frontend",
+    skill: "Flutter"
+  },
+  {
+    type: "Frontend",
+    skill: "React JS"
+  },
+  {
+    type: "Frontend",
+    skill: "JavaScript"
+  },
+  {
+    type: "Frontend",
+    skill: "TypeScript"
+  },
+
+  {
+    type: "Backend",
+    skill: "FastAPI"
+  },
+  {
+    type: "Backend",
+    skill: "Express JS"
+  },
+  {
+    type: "Backend",
+    skill: "Node JS"
+  },
+  {
+    type: "Backend",
+    skill: "REST APIs"
+  },
+
+  {
+    type: "Database",
+    skill: "PostgreSQL"
+  },
+  {
+    type: "Database",
+    skill: "Firebase"
+  },
+  {
+    type: "Database",
+    skill: "MongoDB"
+  }
+].map((skill, index) => (
+              <div className="skill-card" key={index}>
+                <h2 style={{fontWeight : "bolder" , color : dark ? "lightgreen" : "blue" }}>{skill.type}</h2><br/>
+                <h7 style={{fontWeight : "bold"}}>{skill.skill}</h7>
               </div>
             ))}
           </div>
