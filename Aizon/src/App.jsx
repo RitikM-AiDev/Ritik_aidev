@@ -1,5 +1,13 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import ritik_photo from './assets/ritik_photo.jpeg';
+import Popup from './Popup.jsx';
+import desktop_assistant_project from "./assets/desko.png";
+import mailer_agent_project from "./assets/mailer_agent.png";
+import Notogen_project from "./assets/Notogen_project.png";
+import brain_tumor_detection from "./assets/proj1.png";
+import assistant from "./assets/assistant.png";
+import csv_logo from "./assets/csv_logo.png";
 import {
   Code2,
   Brain,
@@ -20,10 +28,119 @@ import { useState } from "react";
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dark , Setdark] = useState(true);
+  const [popup,setPopup] = useState(false);
+  const [header,setHeader] = useState(true);
+   const [selectedProject, setSelectedProject] = useState(null);
+   const array = [
+  {
+    title: "Agentic AI Project",
+    name: "My Assistant Bot",
+    image: assistant,
+    live: "https://ritik-aidev-vgram-bot.hf.space",
+    github: "https://github.com/RitikM-AiDev/VMARG_BOT",
+    description: `
+My Assistant Bot is an AI-powered personal assistant that provides information about me.
+It intelligently answers questions about my skills, projects, and experience.
+The chatbot features a React-based interactive interface for smooth user interaction
+and is supported by a secure Agentic AI backend.
+It also guides users to relevant resources, projects, and career insights, making it a complete personal assistant experience.
+`
+  },
+
+  {
+    title: "Agentic AI Project with Fullstack Web",
+    name: "Desktop Assistant",
+    image: desktop_assistant_project,
+    live: "https://desko-eqco.onrender.com/",
+    github: "https://github.com/RitikM-AiDev/AI-Agentic---desktop-assistant",
+    description: `
+AI-powered desktop assistant that acts as your personal digital companion.
+Built with frontend using JS and React for an interactive and responsive interface,
+backend using FastAPI for handling requests efficiently,
+and AI with Agentic AI to process natural language, perform tasks, and provide instant answers.
+Always available, it helps you manage your day, automate routine tasks,
+and communicate seamlessly with a smart, conversational interface.
+`
+  },
+
+  {
+    title: "Deep Learning Project",
+    name: "Brain Tumor Detector",
+    image: brain_tumor_detection,
+    live: "https://brain-tumor-ai.up.railway.app/",
+    github: "https://github.com/RitikM-AiDev/brain-tumor-ai",
+    description: `
+AI-powered brain tumor detection and classification system that analyzes MRI scans using deep learning.
+The system automatically identifies tumor type and generates a detailed diagnostic report.
+Built with frontend using JS and React for image upload and result display,
+backend using FastAPI for processing and API endpoints,
+and AI with Agentic AI for tumor classification and report generation.
+`
+  },
+
+  {
+    title: "Agentic AI Project",
+    name: "Personalized Mailer Agent",
+    image: mailer_agent_project,
+    live: "",
+    github: "https://github.com/RitikM-AiDev/Agentic-automated-Personal-Email-Agent",
+    description: `
+AI-powered personalised mailer agent that intelligently sorts emails into formal and informal categories,
+drafts responses, and sends emails automatically.
+Built with frontend using JS and React for smooth user interaction,
+backend using FastAPI for secure email handling,
+and AI with Agentic AI to analyze content context, prioritize messages,
+and automate communication efficiently.
+Ideal for users who want smarter inbox management and professional automated email assistance.
+`
+  },
+
+  {
+    title: "Mobile App With Agentic AI",
+    name: "Notogen - AI Notes Maker",
+    image: Notogen_project,
+    live: "",
+    github: "https://github.com/RitikM-AiDev/Notogen-AI_Notes_Maker",
+    description: `
+AI-powered mobile app that reduces classroom note-taking time, allowing students to focus on learning.
+Students record lectures, and NLP algorithms convert speech into structured, clear notes.
+Built with frontend using JS and React for mobile responsiveness,
+backend using FastAPI for processing and storage,
+and AI with Agentic AI to analyze, compare with teacher notes, highlight errors, and provide corrections.
+Ideal for improving learning efficiency and accuracy.
+`
+  },
+
+  {
+    title: "Agentic AI Project",
+    name: "CSV Analyzer",
+    image: csv_logo,
+    live: "https://ritik-aidev-csv-analyser.hf.space",
+    github: "https://github.com/RitikM-AiDev/AI-Automated---CSV_Analyser",
+    description: `
+AI-powered CSV analyzer that automatically examines your CSV files and suggests the best types of charts to visualize the data.
+It generates a complete HTML report that can be opened directly in a browser,
+showing suggested charts and a clear summary.
+Built with a React frontend for file upload and display,
+and a backend powered by Agentic AI for intelligent analysis and report generation.
+`
+  }
+];
+  const handle_popup = (project) =>{
+        setSelectedProject(project);
+        setHeader(false)
+        setPopup(true);
+        
+  }
   const handle_theme = () =>{
     Setdark(!dark);
-
   }
+  const handle_close = () =>{
+    setPopup(false);
+    setSelectedProject(null);
+    setHeader(true)
+  }
+  
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
@@ -35,6 +152,7 @@ export default function App() {
   return (
     <div className={dark ? "app dark-theme" : "app light-theme"}>
       {/* NAVBAR */}
+      { header &&
       <nav className="navbar">
         <div className="navbar-container">
           <div className="logo-wrapper">
@@ -46,12 +164,11 @@ export default function App() {
               <p className="logo-role">AI & ML ENGINEER</p>
             </div>
           </div>
-
           {/* DESKTOP NAV */}
           <div className="desktop-nav" style={{fontSize : 20,fontWeight : "bold"}}>
             {["home", "about", "projects", "skills", "contact"].map(
               (item) => (
-                  <button
+                <button
                   key={item}
                   onClick={() => scrollToSection(item)}
                   className="nav-button"
@@ -67,7 +184,7 @@ export default function App() {
           <button
             className="mobile-menu-btn"
             onClick={() => setMenuOpen(!menuOpen)}
-          >
+            >
             {menuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -75,6 +192,7 @@ export default function App() {
         {/* MOBILE MENU */}
         {menuOpen && (
           <div className="mobile-menu">
+            
             {["home", "about", "projects", "skills", "contact"].map(
               (item) => (
                 <button
@@ -89,10 +207,13 @@ export default function App() {
           </div>
         )}
       </nav>
+      }
 
       {/* HERO */}
       <section id="home" className="hero">
         <div className="container">
+          <div className="container-flex">
+          <div className="profile">
           <div className="hero-badge">
             <Sparkles size={18} />
             Available for Opportunities
@@ -138,6 +259,11 @@ export default function App() {
               Email
             </a>
           </div>
+          </div>
+           <div className="w-90 h-90 rounded-full overflow-hidden bg-black">
+                <img   className="w-full h-full object-contain"  src={ritik_photo} alt="Ritik"/>
+        </div>
+        </div>
         </div>
       </section>
 
@@ -188,40 +314,45 @@ export default function App() {
           </div>
         </div>
       </section>
-
+        
       {/* PROJECTS */}
-      <section id="projects" className="section">
-        <div className="container">
-          <h2 className="section-title">Projects</h2>
+    <section id="projects" className="section">
+  <div className="container">
+    <h2 className="section-title">Projects</h2>
 
-          <div className="projects-grid">
-            {[1, 2, 3, 4].map((project) => (
-              <div className="project-card" key={project}>
-                <div className="project-top">
-                  <div className="project-icon">
-                    <Code2 />
-                  </div>
+    <div className="projects-grid">
+      {array.map((project, index) => (
+        <div className="project-card" key={index}>
+          
+          <div className="project-top">
+            <div className="project-icon">
+              <Code2 />
+            </div>
 
-                  <ChevronRight className="right-arrow" style={{cursor : "pointer"}} />
-                </div>
-
-                <h3>Project {project}</h3>
-
-                <p>
-                  AI powered application showcasing modern machine learning
-                  and scalable architecture.
-                </p>
-
-                <div className="tech-stack">
-                  {["Python", "TensorFlow", "React"].map((tech) => (
-                    <span key={tech}>{tech}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
+            {/* ✅ PASS REAL DATA HERE */}
+            <ChevronRight
+              onClick={() => handle_popup(project)}
+              className="right-arrow"
+              style={{ cursor: "pointer" }}
+            />
           </div>
+
+          {/* ✅ FIX TITLE */}
+          <h3>{project.title}</h3>
+
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* Popup OUTSIDE map (correct) */}
+    <Popup
+      isOpen={popup}
+      onClose={handle_close}
+      project={selectedProject}
+      darkMode={dark}
+    />
+  </div>
+</section>
 
       {/* SKILLS */}
       <section id="skills" className="section dark-section">

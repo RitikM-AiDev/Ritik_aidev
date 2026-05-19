@@ -106,10 +106,15 @@ button {
 .hero {
   padding: 180px 24px 120px;
 }
-
-.container {
-  max-width: 1200px;
+.container{
+   max-width: 1200px;
   margin: auto;
+}
+.container-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content:space-around;
 }
 
 .hero-badge {
