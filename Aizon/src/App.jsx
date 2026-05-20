@@ -255,7 +255,7 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
               href="https://github.com/ritikm-aidev"
               target="_blank"
               rel="noreferrer"
-              className="primary-btn"
+              className="primary-btn-git"
             >
               <FaGithub />
               GitHub
@@ -265,7 +265,7 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
               href="https://www.linkedin.com/in/ritikm-aidev/"
               target="_blank"
               rel="noreferrer"
-              className="secondary-btn"
+              className="secondary-btn-linkedin"
             >
               <FaLinkedinIn />
               LinkedIn
@@ -273,7 +273,7 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
 
             <a
               href="mailto:ritik.aidev@gmail.com"
-              className="secondary-btn"
+              className="secondary-btn-mail"
             >
               <MdEmail />
               Email
