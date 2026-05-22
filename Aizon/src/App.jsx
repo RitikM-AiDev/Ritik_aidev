@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaFileDownload } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import ritik_photo from './assets/ritik_photo.jpeg';
 import Popup from './Popup.jsx';
@@ -278,6 +278,16 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
               <MdEmail />
               Email
             </a>
+             <a
+              href="resume-3rd-onload.pdf"
+              target="_blank"
+              download="resume-3rd-onload.pdf"
+              rel="noreferrer"
+              className="secondary-btn-mail"
+            >
+              <FaFileDownload />
+              Download Resume
+            </a>
           </div>
           </div>
               <div className="relative w-80 h-80 perspective-1000">
@@ -288,8 +298,6 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
   <div className="relative w-full h-full transform-gpu hover:scale-105 transition-transform duration-500 ease-out"
        style={{ transformStyle: 'preserve-3d' }}>
     {/* Shadow layers for depth */}
-    {/* <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600/20 to-purple-600/20 blur-md translate-y-2 translate-x-2"></div> */}
-    {/* <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-600/30 to-pink-600/30 blur-lg translate-y-3 translate-x-3"></div> */}
     
     {/* Main image with 3D border */}
     <div className="relative w-full h-full rounded-full p-[2px] bg-gradient-to-br from-blue-400 via-purple-500 to-pink-600 shadow-[0_15px_40px_rgba(139,92,246,0.5)]"
