@@ -280,7 +280,6 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
             </a>
              <a
               href="resume-3rd-onload.pdf"
-              target="_blank"
               download="resume-3rd-onload.pdf"
               rel="noreferrer"
               className="secondary-btn-mail"
