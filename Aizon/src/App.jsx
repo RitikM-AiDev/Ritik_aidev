@@ -16,9 +16,12 @@ import {
   ChevronRight,
   Menu,
   X,
-  Pointer
+  Pointer,
+  ArrowUpRight,
+  ExternalLink
 
 } from "lucide-react";
+
 import {
     FaMoon,
     FaSun
@@ -387,10 +390,12 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
               <Code2 />
             </div>
 
-            <ChevronRight
+            <ExternalLink
+              size={28}
+              strokeWidth={2.8}
               onClick={() => handle_popup(project)}
               className="right-arrow"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer",width : "30px",height : "30px" }}
             />
           </div>
           <h3>{project.name}</h3>
