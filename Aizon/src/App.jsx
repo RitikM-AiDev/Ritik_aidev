@@ -279,8 +279,8 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
               Email
             </a>
              <a
-              href="resume-3rd-onload.pdf"
-              download="resume-3rd-onload.pdf"
+              href="resume.pdf"
+              download="resume.pdf"
               rel="noreferrer"
               className="secondary-btn-mail"
             >
