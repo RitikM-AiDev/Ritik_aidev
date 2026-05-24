@@ -179,7 +179,7 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
       <nav className="navbar">
         <div className="navbar-container">
           <div className="logo-wrapper">
-            <div className="logo-circle">R</div>
+            <img width={50}src="futrio-icon.png"/>
 
             <div>
               <h1 className="logo-name">RITIK M</h1>
@@ -238,16 +238,17 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
           <div className="container-flex">
           <div className="profile">
           <div className="hero-badge">
-            <Sparkles size={18} />
+            <Sparkles size={50} />
             Available for Opportunities
           </div>
-
           <h1 className="hero-title">RITIK M</h1>
-
           <p className="hero-subtitle">
             Artificial Intelligence & Machine Learning Engineer
           </p>
-
+           <div className="hero-badge">
+            <Sparkles size={50} />
+            Freelancer - Futrio AI
+          </div>
           <p className="hero-description">
             Passionate about building AI applications that are beautiful,
             functional and solve real-world problems.
@@ -323,6 +324,7 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
       </div>
     </div>
   </div>
+  
 </div>
         </div>
         </div>
