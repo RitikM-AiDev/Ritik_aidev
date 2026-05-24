@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedinIn, FaFileDownload } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaFileDownload,FaInstagram,FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import ritik_photo from './assets/ritik_photo.jpeg';
 import Popup from './Popup.jsx';
@@ -517,10 +517,60 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="footer">
-        © 2026 Ritik M • Built with React & CSS
-      </footer>
+
+
+
+<footer className="footer">
+  <div className="footer-container">
+
+    {/* LEFT */}
+    <div className="footer-left">
+
+      <a href="/" className="footer-brand">
+        <img
+          src="futrio-icon.png"
+          alt="FUTRIO Logo"
+          className="footer-logo-img"
+        />
+
+        <h2 className="footer-logo-text">
+          FUTRIO 
+        </h2>
+      </a>
+
+      <p className="footer-copy">
+        © 2026 FUTRIO. All Rights Reserved.
+      </p>
+    </div>
+
+    {/* RIGHT */}
+    <div className="footer-right">
+
+      <div className="footer-socials">
+
+        <a href="https://github.com/RitikM-AiDev" target="_blank">
+          <FaGithub />
+        </a>
+
+        <a href="https://linkedin.com/in/futrio" target="_blank">
+          <FaLinkedin />
+        </a>
+
+        <a href="https://instagram.com/" target="_blank">
+          <FaInstagram /> 
+        </a>
+
+      </div>
+
+      <div className="footer-links">
+        <a href="/">Privacy Policy</a>
+        <a href="/">Terms of Service</a>
+        <a href="/">AI Notice</a>
+      </div>
+
+    </div>
+  </div>
+</footer>
     </div>
   );
 }

@@ -793,43 +793,6 @@ button {
   animation: fadeIn 1s ease 0.3s backwards;
 }
 
-/* ===================================================== */
-/* FOOTER */
-/* ===================================================== */
-
-.footer {
-  margin-top: 20px;
-  border-top: black;
-  padding: 30px;
-  text-align: center;
-  color: black;
-  position: relative;
-  overflow: hidden;
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 1px;
-  background: black;
-  animation: footerLine 3s linear infinite;
-}
-
-@keyframes footerLine {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-/* ===================================================== */
-/* BUTTONS - Premium effects */
-/* ===================================================== */
 
 .primary-btn-git,
 .secondary-btn-mail,
@@ -1119,12 +1082,145 @@ button {
   background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.5), transparent);
 }
 
-.light-theme .footer {
-  border-top: 1px solid rgba(16, 185, 129, 0.2);
+
+.footer {
+  margin-top: 50px;
+  background: #000; /* pure black */
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
 }
 
-.light-theme .footer::before {
-  background: linear-gradient(90deg, transparent, #10b981, transparent);
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #10b981,
+    transparent
+  );
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* LEFT */
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.footer-logo-text {
+   background: linear-gradient(
+    135deg,
+    #7c3aed 0%,
+    #9333ea 30%,
+    #3b82f6 65%,
+    #06b6d4 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  letter-spacing: 1px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.footer-copy {
+  color: rgba(255,255,255,0.7); /* soft white */
+  font-size: 14px;
+}
+
+/* RIGHT */
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-socials a {
+  color: #fff; /* white */
+  font-size: 22px;
+  transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #10b981;
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.7); /* soft white */
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #10b981;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    align-items: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
 }
 
 .light-theme .mobile-menu {
