@@ -497,7 +497,7 @@ and a backend powered by Agentic AI for intelligent analysis and report generati
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="section">
+      <section id="contact" className="section-footer">
         <div className="container contact-section">
           <h2 className="section-title">Get In Touch</h2>
 
